@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,9 +9,9 @@
 </head>
 <body>
     <ul class="pokemon" style="color:red">
-    <%for(let i=1;i<pokemon.length;i++){%>
-    <li><%=JSON.stringify(pokemon[i])%></li>
-    <%}%>
+        <%for(let i=1;i<pokemon.length;i++){%>
+        <li><a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a></li>
+        <%}%>
     </ul>
 </body>
 </html>

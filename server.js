@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const pokeData = require('./models/pokemon');
 
-//MIDDLEWARE
+// MIDDLEWARE
+
+// ROUTING
+app.use('/css', express.static('public/css'));
 
 app.get('/pokemon', (req,res) => {
     res.render('index.ejs', {
