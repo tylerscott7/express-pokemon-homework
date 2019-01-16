@@ -5,7 +5,9 @@ const pokeData = require('./models/pokemon');
 //MIDDLEWARE
 
 app.get('/pokemon', (req,res) => {
-    res.send(pokeData);
+    res.render('index.ejs', {
+        pokemon: pokeData,
+    });
 });
 
 app.listen(3000,() => {
