@@ -10,6 +10,12 @@ app.get('/pokemon', (req,res) => {
     });
 });
 
+app.get('/pokemon/:id', (req,res) => {
+    res.render('show.ejs', {
+        pokemon: pokeData[req.params.id],
+    });
+});
+
 app.listen(3000,() => {
     console.log('server is running');
 })
