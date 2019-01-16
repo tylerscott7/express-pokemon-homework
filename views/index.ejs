@@ -9,9 +9,23 @@
 </head>
 <body>
     <ul class="pokemon" style="color:red">
-        <%for(let i=1;i<pokemon.length;i++){%>
+        <%for(let i=0;i<pokemon.length;i++){%>
         <li><a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a></li>
+
+        <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+
+        <form action="/pokemon/<%=i%>/edit" method="GET">
+            <button type="submit">Edit</button>
+        </form>
+
         <%}%>
+
+        <form action="/pokemon/new" method="GET">
+            <button type="submit">Create new Pokemon!</button>
+        </form>
+
     </ul>
 </body>
 </html>
